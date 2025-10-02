@@ -16,13 +16,13 @@ interface EquipoAtributos {
     descripcion: string;
     ubicacion: string;
     estado: EstadoEquipo;
-    usuarioId?: number; 
+    ResponsableId: number; 
 }
 
-interface EquipoCreacion extends Omit<EquipoAtributos, 'id' | 'estado' | 'usuarioId'> {
+interface EquipoCreacion extends Omit<EquipoAtributos, 'id' | 'estado' | 'ResponsableId'> {
     id?: CreationOptional<number>;
     estado?: CreationOptional<EstadoEquipo>;
-    usuarioId?: number;
+    ResponsableId?: number;
 }
 
 export class Equipo extends Model<EquipoAtributos, EquipoCreacion> 
@@ -32,7 +32,7 @@ implements EquipoAtributos {
     public descripcion!: string;
     public ubicacion!: string;
     public estado!: EstadoEquipo;
-    public usuarioId?: number;
+    public ResponsableId!: number;
 
     // Timestamps opcionales
     public readonly createdAt!: Date;
@@ -62,7 +62,7 @@ Equipo.init({
         allowNull: false,
         defaultValue: EstadoEquipo.DISPONIBLE
     },
-    usuarioId: {
+    ResponsableId: {
         type: DataTypes.INTEGER,
         allowNull: true,
         references: {
