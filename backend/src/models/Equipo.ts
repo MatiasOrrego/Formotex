@@ -1,7 +1,7 @@
 import { DataTypes, Model } from "sequelize";
 import type { CreationOptional } from "sequelize";
-import { sequelize } from "../config/db";
-import { Usuario } from "./User";
+import { sequelize } from "../config/db.js";
+import { Usuario } from "./User.js";
 
 export enum EstadoEquipo {
     DISPONIBLE = 'disponible',

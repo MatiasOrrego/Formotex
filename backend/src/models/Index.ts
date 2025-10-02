@@ -1,6 +1,6 @@
-import { sequelize } from "../config/db";
-import { Usuario } from "./User";
-import { Equipo } from "./Equipo";
+import { sequelize } from "../config/db.js";
+import { Usuario } from "./User.js";
+import { Equipo } from "./Equipo.js";
 
 export const IniciarBd = async () => {
     try {

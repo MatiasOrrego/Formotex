@@ -1,4 +1,4 @@
-import { Usuario, rol } from "../models/User";
+import { Usuario, rol } from "../models/User.js";
 import jwt from "jsonwebtoken";
 import type { SignOptions } from "jsonwebtoken";
 import bcrypt from "bcrypt";

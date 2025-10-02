@@ -1,6 +1,6 @@
 import { DataTypes, Model } from "sequelize";
 import type { CreationOptional } from "sequelize";
-import { sequelize } from "../config/db";
+import { sequelize } from "../config/db.js";
 
 export enum rol {
     ADMIN = 'admin',

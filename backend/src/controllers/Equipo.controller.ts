@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import * as S from '../services/Equipo.service';
+import * as S from '../services/Equipo.service.js';
 
 
 export const listar = async (req: Request, res: Response) => {

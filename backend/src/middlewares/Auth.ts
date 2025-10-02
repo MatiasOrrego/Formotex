@@ -1,7 +1,7 @@
 import type { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 
-import { rol } from '../models/User';
+import { rol } from '../models/User.js';
 
 export interface DatosJWT {sub: string, rol: rol}
 

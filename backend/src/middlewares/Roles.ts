@@ -1,5 +1,5 @@
 import type { Request, Response, NextFunction } from "express";
-import { rol } from "../models/User";
+import { rol } from "../models/User.js";
 
 export const requiereRol = (...rolesPermitidos: rol[]) => {
     return (req: Request, res: Response, next: NextFunction) => {

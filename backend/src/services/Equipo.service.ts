@@ -1,4 +1,4 @@
-import {Equipo} from "../models/Equipo";
+import {Equipo} from "../models/Equipo.js";
 
 export const ListarTodos = async () => {
     return Equipo.findAll({include: ['responsable']});

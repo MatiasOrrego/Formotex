@@ -1,5 +1,5 @@
 import type {Request, Response} from 'express';
-import * as S from '../services/Auth.service';
+import * as S from '../services/Auth.service.js';
 
 export const registrar = async (req: Request, res: Response) => {
     try {
