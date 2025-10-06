@@ -22,15 +22,15 @@ interface UsuarioCreacion extends Omit<UsuarioAtributos, 'id' | 'rol'> {
 
 export class Usuario extends Model<UsuarioAtributos, UsuarioCreacion> 
 implements UsuarioAtributos {
-    public id!: number;
-    public nombre!: string;
-    public email!: string;
-    public password!: string;
-    public rol!: rol;
+    declare id: number;
+    declare nombre: string;
+    declare email: string;
+    declare password: string;
+    declare rol: rol;
 
     // Timestamps opcionales
-    public readonly createdAt!: Date;
-    public readonly updatedAt!: Date;
+    declare readonly createdAt: Date;
+    declare readonly updatedAt: Date;
 }
 
 Usuario.init({

@@ -27,16 +27,16 @@ interface EquipoCreacion extends Omit<EquipoAtributos, 'id' | 'estado' | 'Respon
 
 export class Equipo extends Model<EquipoAtributos, EquipoCreacion> 
 implements EquipoAtributos {
-    public id!: number;
-    public nombre!: string;
-    public descripcion!: string;
-    public ubicacion!: string;
-    public estado!: EstadoEquipo;
-    public ResponsableId!: number;
+    declare id: number;
+    declare nombre: string;
+    declare descripcion: string;
+    declare ubicacion: string;
+    declare estado: EstadoEquipo;
+    declare ResponsableId: number;
 
     // Timestamps opcionales
-    public readonly createdAt!: Date;
-    public readonly updatedAt!: Date;   
+    declare readonly createdAt: Date;
+    declare readonly updatedAt: Date;   
 }
 
 Equipo.init({

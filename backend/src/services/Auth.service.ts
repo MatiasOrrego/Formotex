@@ -19,10 +19,24 @@ export const registrar = async (nombre: string, email: string, password: string,
 }
 
 export const login = async (email: string, password: string) => {
+    // Validar que los parámetros no estén vacíos
+    if (!email || !password) {
+        throw new Error('Email y contraseña son requeridos');
+    }
+
     const usuario = await Usuario.findOne({ where: { email } });
     if (!usuario) {
         throw new Error('Email no encontrado');
     }
+
+    // Validar que la contraseña del usuario no esté vacía
+    if (!usuario.password) {
+        throw new Error('Usuario sin contraseña configurada');
+    }
+
+    console.log('🔍 Comparando contraseñas:');
+    console.log('   Password recibido:', password ? '***' : 'VACÍO');
+    console.log('   Hash en BD:', usuario.password ? 'EXISTS' : 'VACÍO');
 
     const passwordValido = await bcrypt.compare(password, usuario.password);
     if (!passwordValido) {
