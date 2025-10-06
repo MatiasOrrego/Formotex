@@ -161,8 +161,9 @@ curl -X GET http://localhost:3000/api/equipos \
 ##  **Sistema de Roles**
 
 
- **Admin** : ✅ Crear, leer, actualizar y eliminar equipos<br>✅ Registrar nuevos usuarios<br>✅ Acceso total a la API |
- **User** : ✅ Ver lista de equipos<br>✅ Ver detalles de equipos<br>❌ Crear/modificar equipos |
+ **Admin** : ✅ Crear, leer, actualizar y eliminar equipos<br>✅ Registrar nuevos usuarios<br>✅ Acceso total a la API 
+ 
+ **User** : ✅ Ver lista de equipos<br>✅ Ver detalles de equipos<br>❌ Crear/modificar equipos 
 
 ---
 
